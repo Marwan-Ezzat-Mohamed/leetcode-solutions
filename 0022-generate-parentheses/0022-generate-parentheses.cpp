@@ -1,17 +1,4 @@
-/*
- * @lc app=leetcode id=22 lang=cpp
- *
- * [22] Generate Parentheses
- */
 
-// @lc code=start
-
-#include <iostream>
-#include <vector>
-#include <stack>
-#include <string>
-#include <map>
-using namespace std;
 class Solution
 {
 public:
@@ -55,4 +42,4 @@ public:
         return ans;
     }
 };
-// @lc code=end
+
