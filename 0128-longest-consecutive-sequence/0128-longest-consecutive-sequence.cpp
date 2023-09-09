@@ -6,11 +6,10 @@ public:
         for (auto x: nums)st.insert(x);
         
         for ( auto x:st ){
-            int val = x;
-            if (st.find(val-1)==st.end()){
+            if (st.find(x-1)==st.end()){
                 //then we have the smallest element in the sequence
                 int len=1;
-                int cur=val;
+                int cur=x;
                 while(st.find(cur+1)!=st.end()){
                     len++;
                     cur++;
