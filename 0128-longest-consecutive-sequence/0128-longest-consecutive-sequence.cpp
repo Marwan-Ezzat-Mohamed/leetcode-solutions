@@ -1,12 +1,12 @@
 class Solution {
 public:
     int longestConsecutive(vector<int>& nums) {
-       set<int> st;
+        unordered_set<int> st;
         int ans=0;
         for (auto x: nums)st.insert(x);
         
-        for ( auto it = st.begin(); it != st.end(); ++it ){
-            int val = *it;
+        for ( auto x:st ){
+            int val = x;
             if (st.find(val-1)==st.end()){
                 //then we have the smallest element in the sequence
                 int len=1;
