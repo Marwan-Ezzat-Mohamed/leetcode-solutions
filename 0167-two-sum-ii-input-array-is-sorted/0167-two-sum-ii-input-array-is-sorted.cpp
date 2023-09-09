@@ -13,8 +13,6 @@ public:
         
 
             auto it = st.find(search);
-            
-            
 
             if (it != st.end()){
                 vector<int> ans;
