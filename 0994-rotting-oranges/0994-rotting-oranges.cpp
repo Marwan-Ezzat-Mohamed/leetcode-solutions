@@ -24,16 +24,7 @@ public:
         n = grid.size();
         m= grid[0].size();
       
-        int hasUnrotten = 0;
-        for(int row=0;row<grid.size();row++){
-            for(int col=0;col<grid[0].size();col++){
-                if(grid[row][col] == 1){
-                   hasUnrotten = 1;
-                }
-            }
-        }
-        
-        if(!hasUnrotten)return 0;
+    
         
         
         for(int row=0;row<grid.size();row++){
