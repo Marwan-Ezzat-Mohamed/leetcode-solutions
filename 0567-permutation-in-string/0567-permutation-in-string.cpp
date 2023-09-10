@@ -5,12 +5,11 @@ public:
     bool checkInclusion(string s1, string s2) {
         if(s1.size()>s2.size())return false;
         unordered_map<int,int>mp,mp2;
-        for(auto x : s1){
-            mp[x-'a']++;
-        }
+      
         
         for(int i=0;i<s1.size();i++){
             mp2[s2[i]-'a']++;
+            mp[s1[i]-'a']++;
         }
         
         int l = 0,r=s1.size()-1;
