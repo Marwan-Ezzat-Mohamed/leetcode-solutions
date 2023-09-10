@@ -17,9 +17,8 @@ public:
                     return x.second < y.second;
            });
             int maxFreqChar = pr->second;
-              bool valid = (winLen -maxFreqChar)<=k ;
-             //cout<<winLen<<" "<<maxFreqChar<<" "<<l<<" "<<r<<" "<<valid<<endl;
-            // cout<<mp;
+            bool valid = (winLen -maxFreqChar)<=k ;
+
             if (valid)
             {
                 r++;
