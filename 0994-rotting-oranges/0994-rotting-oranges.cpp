@@ -1,6 +1,6 @@
 class Solution {
 public:
-    int n,m,cnt=0,mxTime=0;
+    int n,m;
     
     
     void dfs(vector<vector<int>>& grid,int x,int y,int time,int start){
@@ -23,8 +23,7 @@ public:
     int orangesRotting(vector<vector<int>>& grid) {
         n = grid.size();
         m= grid[0].size();
-        cnt=0;
-        mxTime = 0;
+      
         int hasUnrotten = 0;
         for(int row=0;row<grid.size();row++){
             for(int col=0;col<grid[0].size();col++){
@@ -45,7 +44,7 @@ public:
             }
         }
         
-       
+        int mxTime = 0;
         for(int i=0;i<n;i++){
              for(int j=0;j<m;j++){
                 if(grid[i][j]==1){
