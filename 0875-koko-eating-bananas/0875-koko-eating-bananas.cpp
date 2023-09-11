@@ -20,14 +20,12 @@ class Solution {
 
     int initial = ceil(sum / (double) h);
     int l = initial, r = mx;
-    int ans = 1e9;
     int mid;
     while (l < r) {
       mid = (l + r) >> 1;
       int req = getReq(piles, mid);
       if (req > h) {
         l = mid + 1;
-
       } else {
         r = mid;
       }
