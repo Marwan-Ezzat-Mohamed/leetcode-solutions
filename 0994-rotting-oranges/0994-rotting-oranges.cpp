@@ -23,10 +23,7 @@ public:
     int orangesRotting(vector<vector<int>>& grid) {
         n = grid.size();
         m= grid[0].size();
-      
-    
-        
-        
+
         for(int row=0;row<grid.size();row++){
             for(int col=0;col<grid[0].size();col++){
                 if(grid[row][col] == 2){
@@ -44,7 +41,6 @@ public:
                 mxTime=max(mxTime,-grid[i][j]);
             }
         }
-        cout<<mxTime;
         return mxTime;
         
     }
