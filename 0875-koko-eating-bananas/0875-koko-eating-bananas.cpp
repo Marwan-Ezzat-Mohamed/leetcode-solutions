@@ -3,7 +3,7 @@ class Solution {
 
     int getReq(vector < int > & piles, int num) {
       int cnt = 0;
-      for (auto x: piles) {
+      for (auto &x: piles) {
         int op = ceil((double) x / (double) num);
         cnt += op;
       }
@@ -13,7 +13,7 @@ class Solution {
   int minEatingSpeed(vector < int > & piles, int h) {
     double sum = 0;
     int mx = 0;
-    for (auto x: piles) {
+    for (auto &x: piles) {
       sum += x;
       mx = max(mx, x);
     }
