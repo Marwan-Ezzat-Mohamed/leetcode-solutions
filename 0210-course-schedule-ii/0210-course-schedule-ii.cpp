@@ -24,7 +24,7 @@ public:
     }
     
     vector<int> findOrder(int numCourses, vector<vector<int>>& prerequisites) {
-        vector<vector<int>> adj(numCourses+1,vector<int>());
+        vector<vector<int>> adj(numCourses,vector<int>());
         ans.clear();
         for(vector<int> x:  prerequisites){
             int v=x[0],u=x[1];
