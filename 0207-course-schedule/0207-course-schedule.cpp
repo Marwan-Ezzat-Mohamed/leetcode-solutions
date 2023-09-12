@@ -25,11 +25,11 @@ public:
     
     bool canFinish(int numCourses, vector<vector<int>>& prerequisites) {
 
-        vector<vector<int>> adj(numCourses+1,vector<int>());
+        vector<vector<int>> adj(numCourses,vector<int>());
         
         for(vector<int> x:  prerequisites){
             int v=x[0],u=x[1];
-            adj[u].push_back(v);
+            adj[v].push_back(u);
         }
  
         vector<int> vis(numCourses, 0);
