@@ -1,7 +1,7 @@
 class Solution {
 public:
     
-    bool hasCycle(vector<vector<int>> &adj,int node, vector<int>&vis, vector<int>dfsVisited){
+     bool hasCycle(vector<vector<int>> &adj,int node, vector<int>&vis, vector<int>dfsVisited){
         
         vis[node]=1;
         dfsVisited[node]=1;
@@ -13,12 +13,13 @@ public:
                     return true;   
                 }
                  
-            }else if (dfsVisited[child]) {
+            }else if (vis[child]==1) {
                 return true;
             }
         }
         
-        dfsVisited[node]=0;
+        vis[node]=2;
+        // ans.insert(node);
         return false;
         
     }
