@@ -25,12 +25,10 @@ public:
             ans = ans->next;
             size--;
         }
-        cout<<ans->val;
         if(ans and ans->next){
             ans->next = ans->next->next;
         }
-        
-        
+
         return ans2->next;
         
     }
