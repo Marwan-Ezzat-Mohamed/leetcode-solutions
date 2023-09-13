@@ -29,7 +29,7 @@ public:
             adj[u].push_back(v);
             adj[v].push_back(u);
             
-            if(hasCycle(adj,u,vis,u)){
+            if(hasCycle(adj,v,vis,v)){
                 return e;
             }
             cnt++;
