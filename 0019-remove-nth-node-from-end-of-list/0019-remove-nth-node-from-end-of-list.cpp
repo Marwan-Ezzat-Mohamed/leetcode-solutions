@@ -21,8 +21,7 @@ public:
         }
         
         size-=n;
-        size--;
-        while(size>=0 and ans!=nullptr){
+        while(size>0 and ans!=nullptr){
             ans = ans->next;
             size--;
         }
