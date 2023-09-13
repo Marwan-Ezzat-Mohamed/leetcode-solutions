@@ -4,7 +4,7 @@ public:
     int cnt=1;
     bool hasCycle(vector<vector<int>>& adj ,int node,vector<int>&vis,int source){
         vis[node]=cnt;
-        for(auto child : adj[node]){
+        for(auto &child : adj[node]){
             if(vis[child]!=cnt){
                 if(hasCycle(adj,child,vis,source)){
                     return true;
@@ -24,9 +24,7 @@ public:
         vector<vector<int>> adj(n,vector<int>());
         vector<int>vis(n,0);
         
-
-        
-        for(auto e : edges){
+        for(auto &e : edges){
             int v=e[0]-1,u=e[1]-1;
             adj[u].push_back(v);
             adj[v].push_back(u);
