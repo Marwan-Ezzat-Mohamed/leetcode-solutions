@@ -24,7 +24,7 @@ public:
         fast = head;
         slow = head;
         
-        while(fast and slow and fast->next){
+        while(fast!=nullptr and slow!=nullptr and fast->next!=nullptr){
             slow = slow->next;
             fast = fast->next->next;
             if(fast==slow){
