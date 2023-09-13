@@ -23,7 +23,7 @@ public:
         int n= edges.size();
         vector<vector<int>> adj(n,vector<int>());
         vector<int>vis(n,0);
-        reverse(adj.begin(), adj.end());
+        
 
         
         for(auto e : edges){
