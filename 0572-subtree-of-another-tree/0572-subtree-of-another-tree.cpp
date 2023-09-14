@@ -24,7 +24,8 @@ public:
         return solve(p->right,q->right) && solve(p->left,q->left);
         
     }
-    bool solve1(TreeNode* root,TreeNode* subRoot){
+  
+    bool isSubtree(TreeNode* root, TreeNode* subRoot) {
         if(!root){
             if(!subRoot)return true;
             return false;
@@ -34,12 +35,9 @@ public:
             ans=true;
         }
         
-        solve1(root->right,subRoot);
-        solve1(root->left,subRoot);
+        isSubtree(root->right,subRoot);
+        isSubtree(root->left,subRoot);
         
         return ans;
-    }
-    bool isSubtree(TreeNode* root, TreeNode* subRoot) {
-        return solve1(root,subRoot);
     }
 };
